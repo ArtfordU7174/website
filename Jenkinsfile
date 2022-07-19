@@ -12,7 +12,7 @@ pipeline {
         stage('code build') {
             steps {
                 sh '''docker build . -t artford7174/jenkinsproject
-			docker push -t artford7174/jenkinsproject'''
+			docker push artford7174/jenkinsproject'''
             }
        
         }

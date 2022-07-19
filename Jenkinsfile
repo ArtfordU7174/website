@@ -11,8 +11,9 @@ pipeline {
         }
         stage('code build') {
             steps {
-                sh '''docker rm -f $(docker ps -a -q)
-		  docker build . -t artford7174/jenkinsproject'''
+                sh '''docker build . -t artford7174/jenkinsproject
+		       docker run -it -d artford7174/jenkinsproject	
+			docker rm -f $(docker ps -a -q)'''
             }
         
         }

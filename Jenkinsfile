@@ -19,7 +19,7 @@ pipeline {
         }
         stage('publish code') {
             steps {
-                sh 'docker run -it -d --name final_website -p 80:80 artford7174/jenkinsproject'
+                sh 'docker run -it -d --name final_website -p 82:80 artford7174/jenkinsproject'
             }
         }
 
